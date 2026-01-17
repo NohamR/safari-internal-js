@@ -41,6 +41,17 @@ Creates stable references to DOM elements:
 
 ## Reader Mode System
 
+### **[Reader.html](html/Reader.html)**
+The HTML template that powers Safari's Reader Mode interface:
+- **Complete CSS styling**: 1300+ lines of carefully crafted styles for article display
+- **AI Summary UI**: Collapsible summary sections with smooth animations and expand/collapse controls
+- **Table of Contents**: Sidebar navigation with styled list items and separators
+- **Theme support**: CSS variables for White, Sepia, Gray, and Night themes
+- **Responsive typography**: Styles for headings, paragraphs, blockquotes, figures, and captions
+- **Watch support**: Specialized styles for Apple Watch display
+- **Rich content styling**: Tables, code blocks, pull quotes, and floating images
+- **Accessibility**: Proper focus states and interactive button styling
+
 ### **[Reader.js](js/reader/Reader.js)**
 Powers Safari's Reader Mode core functionality:
 - Manages visibility transitions for Reader view
