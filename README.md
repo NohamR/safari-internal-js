@@ -1,8 +1,18 @@
 # Safari Internal JavaScript Services
 
-- Safari Version: 15.7  
-- Extraction Method: dyld_shared_cache  
+This repository contains two dumps of Safari's internal JavaScript files:
+
+## Available Versions
+
+### Safari 15.7
+- Location: [`15.7/`](15.7/)
 - Extraction Date: 16/01/2026
+- Extraction Method: dyld_shared_cache
+
+### Safari 26.2 (Latest)
+- Location: [`26.2/`](26.2/)
+- Extraction Date: 17/01/2026
+- Extraction Method: dyld_shared_cache
 
 **Credit:** Inspired by [safari-readability](https://github.com/dm-zharov/safari-readability) by [dm-zharov](https://github.com/dm-zharov)
 

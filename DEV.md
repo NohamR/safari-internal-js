@@ -29,6 +29,36 @@ Intelligently classifies form fields to enable autofill:
 - **Date field parsing**: understands various date formats and splits (day/month/year)
 - **Smart matching**: uses pattern recognition to classify fields even without explicit HTML hints
 
+### **[FormMetadataContactsAutoFillMappings.js](26.2/js/forms/FormMetadataContactsAutoFillMappings.js)** *(New in 26.2)*
+Mappings between form fields and Contacts data:
+- Defines relationships between HTML form fields and Contact card properties
+- Maps autofill field types to vCard/Contacts attributes
+- Handles address components (street, city, state, postal code)
+- Contact information mapping (name, email, phone, organization)
+- Enables seamless autofill from Contacts app
+
+### **[FormMetadataJSController.js](26.2/js/forms/FormMetadataJSController.js)** *(New in 26.2)*
+JavaScript bridge for form metadata operations:
+- Provides communication layer between native code and web content
+- Manages form field metadata collection and updates
+- Coordinates autofill operations across different contexts
+- Handles form submission and validation events
+
+### **[FormMetadataUtilities.js](26.2/js/forms/FormMetadataUtilities.js)** *(New in 26.2)*
+Utility functions for form processing:
+- Helper functions for form element analysis
+- Field value normalization and validation
+- Common patterns for field identification
+- Shared utilities used across form metadata modules
+
+### **[PasswordRulesParserJS.js](26.2/js/forms/PasswordRulesParserJS.js)** *(New in 26.2)*
+Parses password requirement rules:
+- Implements password rules format parsing (as per WHATWG spec)
+- Interprets password requirements from websites
+- Generates strong passwords that meet specific site requirements
+- Handles character classes (uppercase, lowercase, digits, special)
+- Validates password constraints (min/max length, required/allowed characters)
+
 ### **[NodePath.js](js/utilities/NodePath.js)**
 Creates stable references to DOM elements:
 - **Path-based element identification**: creates a "fingerprint" for DOM nodes that works even when the DOM changes
@@ -83,6 +113,13 @@ Safari's article detection and cleaning algorithm (similar to Mozilla's Readabil
 - Preserves tables and code blocks
 - Handles multi-column layouts
 - Detects CJK (Chinese, Japanese, Korean) text using Unicode ranges
+
+### **[ReaderShared.js](26.2/js/reader/ReaderShared.js)** *(New in 26.2)*
+Shared utilities for Reader Mode:
+- Common functions used across Reader Mode components
+- Text processing and article content utilities
+- DOM manipulation helpers specific to Reader Mode
+- Coordinate Reader behavior between different modules
 
 ### **[ReaderSharedUI.js](js/reader/ReaderSharedUI.js)**
 Powers the actual Reader Mode interface:
@@ -150,6 +187,14 @@ Enables custom search engine discovery:
 - Finds `<link rel="search">` tags in page header
 - Powers Safari's search engine discovery feature
 - Allows users to add custom search engines from websites
+
+### **[QuickWebsiteSearchURLDetector.js](26.2/js/search/QuickWebsiteSearchURLDetector.js)** *(New in 26.2)*
+Detects website search capabilities:
+- Analyzes web pages for search functionality
+- Identifies search forms and input fields
+- Extracts search URL patterns from website structure
+- Enables Safari's Quick Website Search feature
+- Automatically discovers site-specific search without OpenSearch tags
 
 ---
 
