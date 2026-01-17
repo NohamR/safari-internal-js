@@ -1,8 +1,8 @@
 # Safari Internal JavaScript Services
 
-- Safari Version:** 15.7  
-- Extraction Method:** dyld_shared_cache  
-- Extraction Date:** 16/01/2026
+- Safari Version: 15.7  
+- Extraction Method: dyld_shared_cache  
+- Extraction Date: 16/01/2026
 
 **Credit:** Inspired by [safari-readability](https://github.com/dm-zharov/safari-readability) by [dm-zharov](https://github.com/dm-zharov)
 
