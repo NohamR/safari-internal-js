@@ -456,7 +456,7 @@ function stripCommonPrefix(e, t) {
     n = t.length,
     o = r < n ? r : n;
   let i = 0;
-  for (; i < o && e[i] === t[i]; ) i++;
+  for (; i < o && e[i] === t[i];) i++;
   return [e.slice(i), t.slice(i)];
 }
 function articleTitleAndSiteNameFromTitleString(e, t) {
@@ -522,10 +522,10 @@ function siblingsIncludingSelfForElement(e) {
   let t = e.parentElement;
   if (t) return t.children;
   let r = e;
-  for (; r.previousElementSibling; ) r = r.previousElementSibling;
+  for (; r.previousElementSibling;) r = r.previousElementSibling;
   let n = [],
     o = r;
-  for (; o; ) (n.push(o), (o = o.nextElementSibling));
+  for (; o;) (n.push(o), (o = o.nextElementSibling));
   return n;
 }
 function regularExpressionFromUntrustedPatternAttributeString(e) {
@@ -551,7 +551,7 @@ function pathFromAnchorWithoutLeadingSlash(e) {
 function innermostActiveElement() {
   let e = document.activeElement,
     t = e;
-  for (; t; ) ((t = t?.shadowRoot?.activeElement), t && (e = t));
+  for (; t;) ((t = t?.shadowRoot?.activeElement), t && (e = t));
   return e;
 }
 function elementAppearsToContinueCaptchaWidget(e) {
@@ -1107,7 +1107,7 @@ let doctypeLooksLikeHTML5 =
   FormMetadataJSController.isDebugConsoleLoggingEnabled;
 }),
   (Element.prototype.traversePreviousElement = function () {
-    for (var e = this.previousElementSibling; e && e.lastElementChild; )
+    for (var e = this.previousElementSibling; e && e.lastElementChild;)
       e = e.lastElementChild;
     return e || this.parentElement;
   }),
@@ -1115,7 +1115,7 @@ let doctypeLooksLikeHTML5 =
     if (this) {
       var t = this.previousSibling;
       if (e(t)) return null;
-      for (; t && t.lastChild; ) if (e((t = t.lastChild))) return null;
+      for (; t && t.lastChild;) if (e((t = t.lastChild))) return null;
       return t || this.parentNode;
     }
   }),
@@ -1236,12 +1236,12 @@ let doctypeLooksLikeHTML5 =
   (Node.prototype.allAncestorsAndSelfIncludingShadowDOMHosts = function () {
     let e = [],
       t = this;
-    for (; t; ) (e.push(t), (t = t.parentElementIncludingShadowDOMHost()));
+    for (; t;) (e.push(t), (t = t.parentElementIncludingShadowDOMHost()));
     return e;
   }),
   (HTMLElement.prototype.closestCommonAncestor = function (e) {
     let t = this.parentElement;
-    for (; t; ) {
+    for (; t;) {
       if (t.contains(e)) return t;
       t = t.parentElement;
     }
@@ -1879,7 +1879,7 @@ class FormMetadata {
       }
       let f = [],
         g = 0;
-      for (; g < l; ) {
+      for (; g < l;) {
         let p = [e[g]],
           C = F(e[g]);
         for (let y = g + 1; y < l; ++y) {
@@ -1894,7 +1894,7 @@ class FormMetadata {
     let s = n ? a / n : 0,
       u = [],
       c = 0;
-    for (; c < l; ) {
+    for (; c < l;) {
       let A = [e[c]],
         w = !1,
         E = i[c].isZeroRect() ? null : i[c];
@@ -3055,7 +3055,7 @@ class FormMetadata {
     let i,
       l = "a1Abbb",
       a = !1;
-    for (; l.length <= t; ) {
+    for (; l.length <= t;) {
       let e = o.test(l);
       if (a && !e) return i;
       (e && ((a = !0), (i = l.length)), (l += "b"));
@@ -3847,14 +3847,12 @@ class FormMetadata {
               (!U.ControlLooksLikeCreditCardCardholderField &&
                 !U.ControlLooksLikeCreditCardNumberField))
           ) {
-            if (
-              !(
-                U.ControlLooksLikeDayField ||
-                U.ControlLooksLikeMonthField ||
-                U.ControlLooksLikeYearField ||
-                U.ControlLooksLikeCreditCardCompositeExpirationDateField
-              )
-            ) {
+            if (!(
+              U.ControlLooksLikeDayField ||
+              U.ControlLooksLikeMonthField ||
+              U.ControlLooksLikeYearField ||
+              U.ControlLooksLikeCreditCardCompositeExpirationDateField
+            )) {
               if (U.ControlLooksLikePasswordCredentialField) {
                 if (
                   U.ControlLooksLikeCreditCardSecurityCodeField ||
@@ -3871,12 +3869,10 @@ class FormMetadata {
                   p = !1;
                   continue;
                 }
-                if (
-                  !(
-                    x + 1 < M &&
-                    this._matchesConfirmEmailFieldLabelPattern(u[x + 1])
-                  )
-                )
+                if (!(
+                  x + 1 < M &&
+                  this._matchesConfirmEmailFieldLabelPattern(u[x + 1])
+                ))
                   continue;
                 p = !0;
               }

@@ -131,9 +131,9 @@ function characterAppearsToBeCJK(e) {
   );
 }
 function domDistance(e, t, n) {
-  for (var r = [], i = e; i; ) (r.unshift(i), (i = i.parentNode));
+  for (var r = [], i = e; i;) (r.unshift(i), (i = i.parentNode));
   var a = [];
-  for (i = t; i; ) (a.unshift(i), (i = i.parentNode));
+  for (i = t; i;) (a.unshift(i), (i = i.parentNode));
   for (
     var o = Math.min(r.length, a.length),
       l = Math.abs(r.length - a.length),
@@ -230,7 +230,7 @@ function nearestAncestorElementWithTagName(e, t, n) {
   var r = {};
   if (n) for (var i = 0; i < n.length; ++i) r[n[i]] = !0;
   if (r[normalizedElementTagName(e)]) return null;
-  for (; (e = e.parentElement); ) {
+  for (; (e = e.parentElement);) {
     var a = normalizedElementTagName(e);
     if (r[a]) break;
     if (a === t) return e;
@@ -574,7 +574,7 @@ function elementWouldAppearBetterAsFigureOrAuxiliary(e, t) {
     },
   );
   r.currentNode = t;
-  for (var i = !1, a = !1; r.nextNode(); ) {
+  for (var i = !1, a = !1; r.nextNode();) {
     var o = r.currentNode;
     if (o.nodeType === Node.TEXT_NODE) {
       if (!i && /\S/.test(o.nodeValue)) return !1;
@@ -719,7 +719,7 @@ function functionToPreventPruningDueToInvisibilityInQuirksListForHostname(e) {
       function (e, t) {
         var n = e;
         if (!t) return !1;
-        for (; n && n !== t; ) {
+        for (; n && n !== t;) {
           if (n.classList.contains("hidden")) return !0;
           n = n.parentElement;
         }
@@ -756,7 +756,7 @@ function nextLeafElementForElement(e) {
   return leafElementForElementAndDirection(e, "nextNode");
 }
 function nextNonFloatingVisibleElementSibling(e) {
-  for (var t = e; (t = t.nextElementSibling); )
+  for (var t = e; (t = t.nextElementSibling);)
     if (isElementVisible(t) && "none" === getComputedStyle(t).float) return t;
   return null;
 }
@@ -773,7 +773,7 @@ function elementWithLargestAreaFromElements(e) {
   return t;
 }
 function unwrappedArticleContentElement(e) {
-  for (var t = e; ; ) {
+  for (var t = e; ;) {
     for (var n = t.childNodes, r = n.length, i = null, a = 0; a < r; ++a) {
       var o = n[a],
         l = o.nodeType;
@@ -849,7 +849,7 @@ function changeElementType(e, t) {
     var o = r.item(a);
     n.setAttribute(o.nodeName, o.nodeValue);
   }
-  for (; e.firstChild; ) n.appendChild(e.firstChild);
+  for (; e.firstChild;) n.appendChild(e.firstChild);
   return (e.replaceWith(n), n);
 }
 function pathComponentsForAnchor(e) {
@@ -1079,12 +1079,9 @@ const TweetURLRegex =
       c = null;
     for (a = 0; a < s; ++a) {
       var u = l[a];
-      if (
-        !(
-          c &&
-          c.compareDocumentPosition(u) & Node.DOCUMENT_POSITION_CONTAINED_BY
-        )
-      ) {
+      if (!(
+        c && c.compareDocumentPosition(u) & Node.DOCUMENT_POSITION_CONTAINED_BY
+      )) {
         var m = u.getElementsByTagName("li"),
           d = m.length,
           h = cachedElementBoundingRect(u);
@@ -1247,7 +1244,7 @@ const TweetURLRegex =
       if (n < t) return 0;
       var r = e.parentNode;
       if (!isElementVisible(r)) return 0;
-      for (var i = 1; r && r !== this.element; )
+      for (var i = 1; r && r !== this.element;)
         ((i -= 0.1), (r = r.parentNode));
       return Math.pow(n * i, TextNodeLengthPower);
     },
@@ -1408,7 +1405,7 @@ const TweetURLRegex =
                   s.parentElement !== r.parentElement;
                 )
                   ((s = s.parentElement), (r = r.parentElement));
-              for (; r.childElementCount <= 1; ) {
+              for (; r.childElementCount <= 1;) {
                 if (!r.childElementCount || !s.childElementCount) return !1;
                 if (s.childElementCount > 1) return !1;
                 if (
@@ -1694,7 +1691,7 @@ const TweetURLRegex =
       );
     },
     routeToArticleNode: function () {
-      for (var e = [], t = this.articleNode(); t; ) {
+      for (var e = [], t = this.articleNode(); t;) {
         var n = {};
         n.tagName = normalizedElementTagName(t);
         var i = t.getAttribute("id");
@@ -2528,7 +2525,7 @@ const TweetURLRegex =
         W = dominantFontFamilyAndSizeForElement(e),
         H = dominantFontSizeInPointsFromFontFamilyAndSizeString(W);
       const V = /pull(ed)?quote/i;
-      for (var j = [], Y = [], G = [], Q = [], X = []; b; ) {
+      for (var j = [], Y = [], G = [], Q = [], X = []; b;) {
         try {
           var J,
             K = null,
@@ -3009,7 +3006,7 @@ const TweetURLRegex =
         var je = K ? null : b.firstElementChild;
         if (je) ((b = je), (I = I.firstElementChild), r(1));
         else {
-          for (var Ye; b !== e && !(Ye = b.nextElementSibling); )
+          for (var Ye; b !== e && !(Ye = b.nextElementSibling);)
             ((b = b.parentElement), (I = I.parentElement), r(-1));
           if (b === e) {
             if (K && !elementIsProtected(K))
@@ -3277,7 +3274,7 @@ const TweetURLRegex =
     ancestorsOfElement: function (e) {
       let t = [],
         n = e.parentNode;
-      for (; n; ) (t.push(n), (n = n.parentNode));
+      for (; n;) (t.push(n), (n = n.parentNode));
       return t;
     },
     leadingContentNodeWithSelector: function (e) {
@@ -4147,7 +4144,7 @@ const TweetURLRegex =
         (!n[t].id || !(e = this.contentDocument.getElementById(n[t].id)));
         --t
       );
-      for (t++, e || (e = this.contentDocument); t < n.length; ) {
+      for (t++, e || (e = this.contentDocument); t < n.length;) {
         for (
           var i = n[t],
             r =
@@ -4470,7 +4467,7 @@ const TweetURLRegex =
         if (T !== v) {
           if (E < u - 2) return 0;
           if (v.length >= T.length) {
-            for (var S = 0; v[v.length - 1 - S] === T[T.length - 1 - S]; ) S++;
+            for (var S = 0; v[v.length - 1 - S] === T[T.length - 1 - S];) S++;
             S &&
               ((v = v.substring(0, v.length - S)),
               (T = T.substring(0, T.length - S)));
@@ -4631,13 +4628,11 @@ const TweetURLRegex =
               var d = cachedElementBoundingRect(s);
               ((c = d.width), (m = d.height));
             }
-            if (
-              !(
-                c < r.minimumWidth ||
-                m < r.minimumHeight ||
-                c * m < r.minimumArea
-              )
-            ) {
+            if (!(
+              c < r.minimumWidth ||
+              m < r.minimumHeight ||
+              c * m < r.minimumArea
+            )) {
               var h = this.elementContainsEnoughTextOfSameStyle(s, e, i);
               if (
                 (e.add(s),

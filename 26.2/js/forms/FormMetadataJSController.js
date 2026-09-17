@@ -14,7 +14,7 @@ function addGlobalEventHandler(e, t) {
           : NodeFilter.FILTER_SKIP;
       },
     );
-    for (; t.nextNode(); ) {
+    for (; t.nextNode();) {
       const e = t.currentNode;
       (yield* a(e.shadowRoot), yield e);
     }

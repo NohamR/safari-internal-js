@@ -12,7 +12,7 @@ function plaintextVersionOfNodeAppendingNewlinesBetweenBlockElements(e) {
     null,
   );
   let t = "";
-  for (n.currentNode = e; n.nextNode(); ) {
+  for (n.currentNode = e; n.nextNode();) {
     const e = n.currentNode;
     if (e.nodeType === Node.TEXT_NODE) {
       t += e.textContent;

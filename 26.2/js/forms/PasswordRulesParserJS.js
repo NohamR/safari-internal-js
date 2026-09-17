@@ -148,7 +148,7 @@ function _canonicalizedPropertyValues(e, r) {
 }
 function _indexOfNonWhitespaceCharacter(e, r = 0) {
   let t = e.length;
-  for (; r < t && _isASCIIWhitespace(e[r]); ) ++r;
+  for (; r < t && _isASCIIWhitespace(e[r]);) ++r;
   return r;
 }
 function _parseIdentifier(e, r) {
@@ -253,7 +253,7 @@ function _parseInteger(e, r) {
 function _parsePasswordRulesInternal(e) {
   let r = [],
     t = e.length;
-  for (var a = _indexOfNonWhitespaceCharacter(e); a < t; ) {
+  for (var a = _indexOfNonWhitespaceCharacter(e); a < t;) {
     if (!_isIdentifierCharacter(e[a])) return r;
     var [n, a] = _parsePasswordRule(e, a);
     if (

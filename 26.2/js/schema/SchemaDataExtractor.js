@@ -124,7 +124,7 @@ var SchemaDataExtractor = function () {};
           (o[e] = t.textContent ? t.textContent : t.getAttribute("content"));
       }
       let h = s.parentNode;
-      for (; null !== h && -1 === e.indexOf(h); ) h = h.parentNode;
+      for (; null !== h && -1 === e.indexOf(h);) h = h.parentNode;
       const i = s.querySelectorAll("[itemprop='telephone']");
       if (null !== h) {
         let t = h.querySelectorAll("[itemprop='name']");
@@ -171,7 +171,7 @@ var SchemaDataExtractor = function () {};
       if ("http://schema.org" !== a && "https://schema.org" !== a) return t;
       t[SchemaDataExtractor.containsSchemaOrgKey] = !0;
       let o = [];
-      for (o.unshift(r); o.length; ) {
+      for (o.unshift(r); o.length;) {
         let e = o.shift();
         if (null != e) {
           if (
