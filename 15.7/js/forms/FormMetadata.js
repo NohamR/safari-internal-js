@@ -300,7 +300,7 @@ function stripCommonPrefix(e, t) {
     r = t.length,
     n = o < r ? o : r;
   let i = 0;
-  for (; i < n && e[i] === t[i]; ) i++;
+  for (; i < n && e[i] === t[i];) i++;
   return [e.slice(i), t.slice(i)];
 }
 function articleTitleAndSiteNameFromTitleString(e, t) {
@@ -366,10 +366,10 @@ function siblingsIncludingSelfForElement(e) {
   let t = e.parentElement;
   if (t) return t.children;
   let o = e;
-  for (; o.previousElementSibling; ) o = o.previousElementSibling;
+  for (; o.previousElementSibling;) o = o.previousElementSibling;
   let r = [],
     n = o;
-  for (; n; ) (r.push(n), (n = n.nextElementSibling));
+  for (; n;) (r.push(n), (n = n.nextElementSibling));
   return r;
 }
 function regularExpressionFromUntrustedPatternAttributeString(e) {
@@ -395,7 +395,7 @@ function pathFromAnchorWithoutLeadingSlash(e) {
 function innermostActiveElement() {
   let e = document.activeElement,
     t = e;
-  for (; t; ) ((t = t?.shadowRoot?.activeElement), t && (e = t));
+  for (; t;) ((t = t?.shadowRoot?.activeElement), t && (e = t));
   return e;
 }
 function elementAppearsToContinueCaptchaWidget(e) {
@@ -479,7 +479,7 @@ let doctypeLooksLikeHTML5 =
   FormMetadataJSController.isDebugConsoleLoggingEnabled;
 }),
   (Node.prototype.traversePreviousElement = function () {
-    for (var e = this.previousElementSibling; e && e.lastElementChild; )
+    for (var e = this.previousElementSibling; e && e.lastElementChild;)
       e = e.lastElementChild;
     return e || this.parentElement;
   }),
@@ -487,7 +487,7 @@ let doctypeLooksLikeHTML5 =
     if (this) {
       var t = this.previousSibling;
       if (e(t)) return null;
-      for (; t && t.lastChild; ) if (e((t = t.lastChild))) return null;
+      for (; t && t.lastChild;) if (e((t = t.lastChild))) return null;
       return t || this.parentNode;
     }
   }),
@@ -604,12 +604,12 @@ let doctypeLooksLikeHTML5 =
   (Node.prototype.allAncestorsAndSelfIncludingShadowDOMHosts = function () {
     let e = [],
       t = this;
-    for (; t; ) (e.push(t), (t = t.parentElementIncludingShadowDOMHost()));
+    for (; t;) (e.push(t), (t = t.parentElementIncludingShadowDOMHost()));
     return e;
   }),
   (HTMLElement.prototype.closestCommonAncestor = function (e) {
     let t = this.parentElement;
-    for (; t; ) {
+    for (; t;) {
       if (t.contains(e)) return t;
       t = t.parentElement;
     }
@@ -1147,7 +1147,7 @@ let cachedRegularExpressionsForDomainMatching = {};
         }
         let f = [],
           g = 0;
-        for (; g < l; ) {
+        for (; g < l;) {
           let p = [e[g]],
             C = s(e[g]);
           for (let A = g + 1; A < l; ++A) {
@@ -1162,7 +1162,7 @@ let cachedRegularExpressionsForDomainMatching = {};
       let u = r ? a / r : 0,
         c = [],
         d = 0;
-      for (; d < l; ) {
+      for (; d < l;) {
         let b = [e[d]],
           y = !1,
           S = i[d].isZeroRect() ? null : i[d];
@@ -2294,7 +2294,7 @@ let cachedRegularExpressionsForDomainMatching = {};
       let n,
         i = "a1Abbb",
         l = !1;
-      for (; i.length <= t; ) {
+      for (; i.length <= t;) {
         let e = r.test(i);
         if (l && !e) return n;
         (e && ((l = !0), (n = i.length)), (i += "b"));
@@ -3109,14 +3109,12 @@ let cachedRegularExpressionsForDomainMatching = {};
                 (!U.ControlLooksLikeCreditCardCardholderField &&
                   !U.ControlLooksLikeCreditCardNumberField))
             ) {
-              if (
-                !(
-                  U.ControlLooksLikeDayField ||
-                  U.ControlLooksLikeMonthField ||
-                  U.ControlLooksLikeYearField ||
-                  U.ControlLooksLikeCreditCardCompositeExpirationDateField
-                )
-              ) {
+              if (!(
+                U.ControlLooksLikeDayField ||
+                U.ControlLooksLikeMonthField ||
+                U.ControlLooksLikeYearField ||
+                U.ControlLooksLikeCreditCardCompositeExpirationDateField
+              )) {
                 if (U.ControlLooksLikePasswordCredentialField) {
                   if (
                     U.ControlLooksLikeCreditCardSecurityCodeField ||
@@ -3133,12 +3131,10 @@ let cachedRegularExpressionsForDomainMatching = {};
                     g = !1;
                     continue;
                   }
-                  if (
-                    !(
-                      M + 1 < L &&
-                      this._matchesConfirmEmailFieldLabelPattern(u[M + 1])
-                    )
-                  )
+                  if (!(
+                    M + 1 < L &&
+                    this._matchesConfirmEmailFieldLabelPattern(u[M + 1])
+                  ))
                     continue;
                   g = !0;
                 }

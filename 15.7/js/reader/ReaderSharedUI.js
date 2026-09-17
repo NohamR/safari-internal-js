@@ -657,7 +657,7 @@ function stopExtendingElementBeyondTextColumn(e) {
 function leadingMarginAndPaddingAppliedToElementFromAncestors(e) {
   let t = 0,
     n = e.parentElement;
-  for (; n && !n.classList.contains("page"); ) {
+  for (; n && !n.classList.contains("page");) {
     let e = getComputedStyle(n);
     ((t +=
       parseFloat(e["-webkit-padding-start"]) +
@@ -1735,7 +1735,7 @@ const ThemeSettings = {
     },
     _rebuildDynamicStyleSheet: function () {
       let e = document.getElementById("dynamic-article-content").sheet;
-      for (; e.cssRules.length; ) e.removeRule(0);
+      for (; e.cssRules.length;) e.removeRule(0);
       let t = this._currentFontSettings().fontSizes[this._textSizeIndex] + "px",
         n = this._currentFontSettings().lineHeights[this._textSizeIndex];
       e.insertRule(
@@ -1977,7 +1977,7 @@ let lastMouseDownWasOutsideOfPaper = !1;
         }
         let l = e.firstChild,
           r = t.firstChild;
-        for (; l; ) {
+        for (; l;) {
           if (!n(l, r)) return !1;
           ((l = l.nextSibling), (r = r.nextSibling));
         }
@@ -2089,13 +2089,13 @@ let lastMouseDownWasOutsideOfPaper = !1;
       }
       if (this.metadataElement && this.metadataElement.innerText) {
         let e = document.createElement("div");
-        for (e.className = "metadata"; this.metadataElement.firstChild; )
+        for (e.className = "metadata"; this.metadataElement.firstChild;)
           e.appendChild(this.metadataElement.firstChild);
         n.appendChild(e);
       }
       let a = e.tagName;
       if ("PRE" === a || "CODE" === a) n.appendChild(e);
-      else for (; e.firstChild; ) n.appendChild(e.firstChild);
+      else for (; e.firstChild;) n.appendChild(e.firstChild);
       (document
         .getElementById("article")
         .insertBefore(n, incomingPagePlaceholder()),
